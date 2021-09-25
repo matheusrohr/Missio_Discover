@@ -21,3 +21,12 @@ html{
 
     font-size: 62.5%;
 }
+body{
+    background-color: var(--background);
+    height: 100vh;
+    width: 100vw;
+}
+body, button, input, textarea{
+    font-size: clamp(14px, 1.6rem, 2vw);
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
