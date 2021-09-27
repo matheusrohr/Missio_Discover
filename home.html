@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- View Port -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--CSS-->
     <link rel="stylesheet" href="/styles/global.css">
@@ -14,32 +15,37 @@
     <title>Roquet.Q</title>
 </head>
 <body>
-    <header>
-        <img src="assents/logo.svg" alt="logo">
-    </header>
-    <main>
-         <div class="container">
-             <section>
-                 <h2>Entre como participante</h2>
-                 <form action="">
-                     <label class="sr-only" for="room-id">Código da sala</label>
-                     <input type="number" id="room-id" placeholder="codigo da sala">
-                     <button>
-                         <img src="assents/enter-room.svg" alt="Entrar na sala">na sala</button>
-                 </form>
-             </section>
-             <div class="separator">
-                 <div></div>
-                 <div>ou</div>
-                 <div></div>
-             </div>
-             <section>
-                 <h2>Crie sua própria sala de forma fácil</h2>
-                 <a href="create-room.html">
-                     <img src="assents/users.svg"> Criar sala
-                 </a>
-             </section>
-         </div>
-    </main>
+    <div id="home" class="content">    
+        <header>
+            <img src="assents/logo.svg" alt="logo">
+        </header>
+        <div id="bg">
+
+        </div>
+        <main>
+            <div class="container">
+                <section>
+                    <h2>Entre como participante</h2>
+                    <form action="">
+                        <label class="sr-only" for="room-id">Código da sala</label>
+                        <input type="number" id="room-id" placeholder="codigo da sala">
+                        <button>
+                            <img src="assents/enter-room.svg" alt="Entrar na sala">na sala</button>
+                        </form>
+                    </section>
+                    <div class="separator">
+                        <div></div>
+                        <div>ou</div>
+                        <div></div>
+                    </div>
+                    <section>
+                        <h2>Crie sua própria sala de forma fácil</h2>
+                        <a href="create-room.html" class="button">
+                            <img src="assents/users.svg"> Criar sala
+                        </a>
+                </section>
+            </div>
+        </main>
+    </div>
 </body>
 </html>
