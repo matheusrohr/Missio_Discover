@@ -1,0 +1,15 @@
+#room header{
+    width: 100%;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+}
+
+#room header .buttons{
+    display: flex;
+}
+
+button, .button, input{
+    height: 5rem;
+    width: 17rem;
+}

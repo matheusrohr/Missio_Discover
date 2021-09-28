@@ -66,7 +66,7 @@ input, button, .button{
     height: 21rem;
     position: fixed;
     clip-path: circle();
-    opacity: .5;
+    opacity: .1;
 }
 
 .ball.top{
