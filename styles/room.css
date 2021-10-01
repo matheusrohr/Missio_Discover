@@ -49,6 +49,7 @@
     border:solid var(--grey-blue);
     border-radius: 0 .8rem .8rem .8rem;
     padding: 1.6rem;
+    margin-bottom: 1.6rem;
 }
 
 #room main #question-form form textarea{
@@ -81,4 +82,51 @@
     padding: 1.3 11.6;
     width: 10rem;
     height: 4rem;
+}
+
+/* Questions*/
+
+#questions .question{
+    border-radius: 0 .8rem .8rem .8rem;
+    padding: 2.4rem;
+    margin-bottom: .8rem;
+    background-color: var(--light-blue);
+    height: 13.6rem;
+}
+
+#questions .question .text-question{
+    font-family: var(--font_titulos);
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: var(--black);
+    display: flex;
+    align-items: center;
+}
+
+#questions .question .text-question > img{
+    padding: 1.6rem;
+}
+
+#questions .question .actions > img{
+    width: .8rem;
+    height: .8rem;
+}
+
+#questions .question .actions{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+#questions .question .actions > a{
+    display: flex;
+    align-items: center;
+}
+
+#questions .question .actions > a:nth-child(1){
+    padding-right: 2.4rem;
+}
+
+#questions .question .actions > a > img{
+    padding-right: .8rem;
 }
