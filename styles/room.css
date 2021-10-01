@@ -42,9 +42,10 @@
     font-weight: 700;
     font-family: var(--font_titulos);
     line-height: 4.2rem;
+    margin-bottom: 2.4rem;
 }
 
-#room main #question-form {
+#question-form form{
     border:solid var(--grey-blue);
     border-radius: 0 .8rem .8rem .8rem;
     padding: 1.6rem;
