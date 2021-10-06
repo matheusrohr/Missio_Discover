@@ -8,6 +8,8 @@
         <!--CSS-->
         <link rel="stylesheet" href="/styles/global.css">
         <link rel="stylesheet" href="/styles/room.css">
+        <link rel="stylesheet" href="/styles/modal.css">
+
         <!--Fonts-->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -30,6 +32,11 @@
                 </div>
             </header>
             <main>
+
+            <!--
+                Campo para perguntas
+            -->
+
                 <section id="question-form">
                     <h2>Faça sua pergunta</h2>
                     <form>
@@ -43,8 +50,89 @@
                             <button>Enviar</button>
                         </footer>
                     </form>
+
+                    <!--
+                        Lista de perguntas
+                    -->
                     <section id="questions">
-                        <div class="question">
+                        <div class="question-wrapper read">
+                            <div class="text-question">
+                                <img src="/assents/users-white.svg">
+                                <p>
+                                    Qual a diferença entre const, var e let no Javascript?
+                                </p>
+                            </div>
+                            <div class="actions">
+                                <a href="#">
+                                    <img src="/assents/check.svg">
+                                    Marcar como lida
+                                </a>
+                                <a href="#">
+                                    <img src="/assents/trash.svg">
+                                    Excluir
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="question-wrapper">
+                            <div class="text-question">
+                                <img src="/assents/users-white.svg">
+                                <p>
+                                    Gera textos substituindo palavras por sinônimos. O texto gerado não é considerado duplicado e são ótimos para blogs e artigos, ajudando também em técnicas de SEO. Qual a diferença entre const, var e let no Javascript?
+                                    Gera textos substituindo palavras por sinônimos. O texto gerado não é considerado duplicado e são ótimos para blogs e artigos, ajudando também em técnicas de SEO. Qual a diferença entre const, var e let no Javascript?
+                                </p>
+                            </div>
+                            <div class="actions">
+                                <a href="#">
+                                    <img src="/assents/check.svg">
+                                    Marcar como lida
+                                </a>
+                                <a href="#">
+                                    <img src="/assents/trash.svg">
+                                    Excluir
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <div class="question-wrapper">
+                            <div class="text-question">
+                                <img src="/assents/users-white.svg">
+                                <p>
+                                    Qual a diferença entre const, var e let no Javascript?
+                                </p>
+                            </div>
+                            <div class="actions">
+                                <a href="#">
+                                    <img src="/assents/check.svg">
+                                    Marcar como lida
+                                </a>
+                                <a href="#">
+                                    <img src="/assents/trash.svg">
+                                    Excluir
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="question-wrapper">
+                            <div class="text-question">
+                                <img src="/assents/users-white.svg">
+                                <p>
+                                    Qual a diferença entre const, var e let no Javascriptgggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggg?
+                                </p>
+                            </div>
+                            <div class="actions">
+                                <a href="#">
+                                    <img src="/assents/check.svg">
+                                    Marcar como lida
+                                </a>
+                                <a href="#">
+                                    <img src="/assents/trash.svg">
+                                    Excluir
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="question-wrapper read">
                             <div class="text-question">
                                 <img src="/assents/users-white.svg">
                                 Qual a diferença entre const, var e let no Javascript?
@@ -60,15 +148,11 @@
                                 </a>
                             </div>
                         </div>
-    
-                        <div class="question">
+
+                        <div class="question-wrapper">
                             <div class="text-question">
-                                <div class="user-question">
-                                    <img src="/assents/users-white.svg">
-                                </div>
-                                <div class="quest">
-                                <p>Reunimos as melhores práticas para criar o seu conteúdo com qualidade e rapidez, e tudo isso em um só lugar. Você ganha melhor visibilidade de seu site ou blog, geração automática de conteúdo rápido e de qualidade. Uma grande característica do sistema é a utilizaçã</p>
-                                </div>
+                                <img src="/assents/users-white.svg">
+                                Qual a diferença entre const, var e let no Javascript?
                             </div>
                             <div class="actions">
                                 <a href="#">
@@ -81,22 +165,43 @@
                                 </a>
                             </div>
                         </div>
-    
-                        <div class="question read">
+
+                        <div class="question-wrapper">
                             <div class="text-question">
                                 <img src="/assents/users-white.svg">
                                 Qual a diferença entre const, var e let no Javascript?
                             </div>
                             <div class="actions">
                                 <a href="#">
+                                    <img src="/assents/check.svg">
+                                    Marcar como lida
+                                </a>
+                                <a href="#">
                                     <img src="/assents/trash.svg">
                                     Excluir
                                 </a>
                             </div>
-                        </div>
+                        </div>     
                     </section>
                 </section>
             </main>
-        </div>        
+        </div>
+        <!--MODAL-->
+        <div class="modal-wrapper">
+            <div class="modal">
+                <h2>Excluir</h2>
+                <p>Tem certeza que você deseja Excluir esta pergunta?</p>
+                <form>
+                    <label for-id="password" class="sr-only">Digite sua senha admin</label>
+                    <input type="password" id="password" name="password" placeholder="Digite sua senha">
+
+                    <div class="buttons">
+                        <div class="button">Cancelar</div>
+                        <button>Sim, excluir</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
     </body>
 </html>

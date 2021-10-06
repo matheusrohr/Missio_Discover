@@ -1,0 +1,33 @@
+.modal-wrapper{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background: rgba(4, 9, 17, .8);
+    display: flex;
+}
+
+.oculte{
+    display:none;
+}
+
+.modal-wrapper .modal{
+    width: min(59rem , 90%);
+    background: var(--white);
+    border-radius: .8rem;
+    margin: auto;
+    text-align: center;
+    font-family: var(--font_titulos);
+    padding: 6.4rem;
+}
+.modal-wrapper .modal > h2{
+    color: var(--black);
+}
+.modal-wrapper .modal > p{
+    color: var(--grey-dark);
+}
+
+#password{
+    border: solid .1rem var(--blue);
+}

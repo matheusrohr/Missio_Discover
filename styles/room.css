@@ -86,24 +86,26 @@
 
 /* Questions*/
 
-#questions .question{
+#questions .question-wrapper{
     border-radius: 0 .8rem .8rem .8rem;
     padding: 2.4rem;
     margin-bottom: .8rem;
     background-color: var(--light-blue);
-    height: 13.6rem;
+    display: flex;
+    min-height: 13.1rem;
+    align-items: center;
 }
 
-#questions .question .text-question{
+#questions .question-wrapper .text-question{
     font-family: var(--font_titulos);
     font-size: 1.6rem;
     font-weight: 400;
     color: var(--black);
     display: flex;
-    align-items: center;
+    align-items:flex-start;
 }
 
-#questions .question .text-question  > img{
+#questions .question-wrapper .text-question  > img{
     background-color: var(--blue);
     clip-path: circle();
     padding: 1.6rem;
@@ -117,36 +119,43 @@
     margin-right: 1rem;
 }
 
-#questions .question .actions > img{
+#questions .question-wrapper .actions > img{
     width: .8rem;
     height: .8rem;
 }
 
-#questions .question .actions{
+#questions .question-wrapper .actions{
     display: flex;
     align-items: center;
     justify-content: flex-end;
 }
 
-#questions .question .actions > a{
+#questions .question-wrapper .actions > a{
     display: flex;
     align-items: center;
 }
 
-#questions .question .actions > a:nth-child(2){
+#questions .question-wrapper .actions > a:nth-child(2){
     padding-left: 2.4rem;
 }
 
-#questions .question .actions > a > img{
+#questions .question-wrapper .actions > a > img{
     padding-right: .8rem;
 }
 
 /* question-reader */
 
-#questions .question.read{
+#questions .question-wrapper.read{
     background-color: var(--grey-medium);
 }
 
-#questions .question.read .text-question > img{
+#questions .question-wrapper.read .text-question > img{
     background-color: var(--grey-blue);
+}
+
+#questions .question-wrapper .text-question > p {
+    word-break:break-all;
+    display: flex;
+    align-items: center;
+    min-height: 5.4rem;
 }
