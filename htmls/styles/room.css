@@ -91,9 +91,9 @@
     padding: 2.4rem;
     margin-bottom: .8rem;
     background-color: var(--light-blue);
-    display: flex;
+    /*display: flex;
     min-height: 13.1rem;
-    align-items: center;
+    align-items: center; */
 }
 
 #questions .question-wrapper .text-question{
