@@ -28,7 +28,8 @@
                     <img src="/images/logo.svg" alt="Rocket.Q logo">
                 </a>
                 <div class="buttons">
-                    <div class="button outline" id="room-id" data-id="323243"> #323243
+                    <div class="button outline" id="room-id" data-id="<%= roomId%>">
+                        #<%= roomId%>
                         <img src="/images/copy.svg">
                     </div>
                     <a href="" class="button">
@@ -38,13 +39,11 @@
             </header>
             <main>
 
-            <!--
-                Campo para perguntas
-            -->
+            <!-- Campo para perguntas -->
 
                 <section id="question-form">
                     <h2>Faça sua pergunta</h2>
-                    <form>
+                    <form action="/question/create/<%=roomId%>" method="POST">
                         <label for-id="question" class="sr-only">O que você que perguntar?</label>
                         <textarea name="question" placeholder="O que você que perguntar?" id="question"></textarea>
                         <footer>
@@ -56,15 +55,48 @@
                         </footer>
                     </form>
 
-                    <!--
-                        Lista de perguntas
-                    -->
+                    <!-- Inicio da  Lista de perguntas -->
                     <section id="questions">
+
+                        <% if(isNoquestions) { %>
+                            
+                            <%- include(`parts/noquestion`)%>
+
+                        <% } %>
+                        
+                        <!--Inicio das questões não lidas-->
+                        <% questions.forEach(question => { %>
+
+                            <div class="question-wrapper">
+                                <div class="text-question">
+                                    <img src="/images/users-white.svg">
+                                    <p>
+                                        <%=question.title %>
+                                    </p>
+                                </div>
+                                <div class="actions">
+                                    <a href="#" class="check room-id" data-id="<%=question.id%>">
+                                        <img src="/images/check.svg">
+                                        Marcar como lida
+                                    </a>
+                                    <a href="#" class="delete room-id" data-id="<%=question.id%>">
+                                        <img src="/images/trash.svg">
+                                        Excluir
+                                    </a>
+                                </div>
+                            </div>
+
+                        <% }); %>
+                        <!--Fim das questões não lidas-->
+
+                        <!--Inicio das questões lidas-->
+                        <% questionsRead.forEach(questionRead => { %>
+
                         <div class="question-wrapper read">
                             <div class="text-question">
                                 <img src="/images/users-white.svg">
                                 <p>
-                                    Qual a diferença entre const, var e let no Javascript?
+                                    <%=questionRead.title %>
                                 </p>
                             </div>
                             <div class="actions">
@@ -74,112 +106,10 @@
                                 </a>
                             </div>
                         </div>
-
-                        <div class="question-wrapper">
-                            <div class="text-question">
-                                <img src="/images/users-white.svg">
-                                <p>
-                                    Gera textos substituindo palavras por sinônimos. O texto gerado não é considerado duplicado e são ótimos para blogs e artigos, ajudando também em técnicas de SEO. Qual a diferença entre const, var e let no Javascript?
-                                    Gera textos substituindo palavras por sinônimos. O texto gerado não é considerado duplicado e são ótimos para blogs e artigos, ajudando também em técnicas de SEO. Qual a diferença entre const, var e let no Javascript?
-                                </p>
-                            </div>
-                            <div class="actions">
-                                <a href="#" class="check room-id" data-id="2">
-                                    <img src="/images/check.svg">
-                                    Marcar como lida
-                                </a>
-                                <a href="#" class="delete room-id" data-id="2">
-                                    <img src="/images/trash.svg">
-                                    Excluir
-                                </a>
-                            </div>
-                        </div>
-                        
-                        <div class="question-wrapper">
-                            <div class="text-question">
-                                <img src="/images/users-white.svg">
-                                <p>
-                                    Qual a diferença entre const, var e let no Javascript?
-                                </p>
-                            </div>
-                            <div class="actions">
-                                <a href="#" class="check room-id" data-id="3">
-                                    <img src="/images/check.svg">
-                                    Marcar como lida
-                                </a>
-                                <a href="#" class="delete room-id" data-id="3">
-                                    <img src="/images/trash.svg">
-                                    Excluir
-                                </a>
-                            </div>
-                        </div>
-
-                        <div class="question-wrapper">
-                            <div class="text-question">
-                                <img src="/images/users-white.svg">
-                                <p>
-                                    Qual a diferença entre const, var e let no Javascriptgggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggg?
-                                </p>
-                            </div>
-                            <div class="actions">
-                                <a href="#" class="check room-id" data-id="4">
-                                    <img src="/images/check.svg">
-                                    Marcar como lida
-                                </a>
-                                <a href="#" class="delete room-id" data-id="4">
-                                    <img src="/images/trash.svg">
-                                    Excluir
-                                </a>
-                            </div>
-                        </div>
-
-                        <div class="question-wrapper read">
-                            <div class="text-question">
-                                <img src="/images/users-white.svg">
-                                Qual a diferença entre const, var e let no Javascript?
-                            </div>
-                            <div class="actions">
-                                <a href="#" class="delete room-id" data-id="5">
-                                    <img src="/images/trash.svg">
-                                    Excluir
-                                </a>
-                            </div>
-                        </div>
-
-                        <div class="question-wrapper">
-                            <div class="text-question">
-                                <img src="/images/users-white.svg">
-                                Qual a diferença entre const, var e let no Javascript?
-                            </div>
-                            <div class="actions">
-                                <a href="#" class="check room-id" data-id="6">
-                                    <img src="/images/check.svg">
-                                    Marcar como lida
-                                </a>
-                                <a href="#" class="delete room-id" data-id="6">
-                                    <img src="/images/trash.svg">
-                                    Excluir
-                                </a>
-                            </div>
-                        </div>
-
-                        <div class="question-wrapper">
-                            <div class="text-question">
-                                <img src="/images/users-white.svg">
-                                Qual a diferença entre const, var e let no Javascript?
-                            </div>
-                            <div class="actions">
-                                <a href="#" class="check room-id" data-id="7">
-                                    <img src="/images/check.svg">
-                                    Marcar como lida
-                                </a>
-                                <a href="#" class="delete room-id" data-id="7">
-                                    <img src="/images/trash.svg">
-                                    Excluir
-                                </a>
-                            </div>
-                        </div>     
+                        <% }); %>
+                        <!--Fim das questões não lidas-->
                     </section>
+                    <!-- Fim da  Lista de perguntas --> 
                 </section>
             </main>
         </div>
