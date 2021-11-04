@@ -51,22 +51,31 @@ module.exports = {
         res.render("room", {roomId: roomId, questions: questions, questionsRead: questionsRead, isNoquestions: isNoquestions})
 
     },
-    async enter(req, res){
-        const db = await Database()
-        
+    async enter(req, res){     
         const roomId = req.body.roomId
 
-        //const verifyRoom = await db.all(`SELECT * FROM rooms WHERE id = ${roomId}`)
+        const isRoom = await module.exports.verifyRoom(roomId)
 
-        //console.log(`Retorno do banco ${verifyRoom.pass}`)
+        console.log(`is Room Dentro de Enter ${isRoom}`)
 
-        //if(verifyRoom.id == roomId){
-
+        if(! isRoom){
+            
+            console.log("sala existe")
             res.redirect(`room/${roomId}`)
-        //}else{
-        //    console.log("OIIIIIII")
-            //res.redirect('/')
-        //}
+        }else{
+            console.log("sala não existe")
+            res.redirect('/')
+        }
 
+    },
+    async verifyRoom (roomId){
+        const db = await Database()
+        let isRoom = true
+//        console.log(`Verifica se a sala existe com o ID ${roomId}`)
+        const roomExistIds = await db.all(`SELECT id FROM rooms`)
+        console.log(`COd DB ${roomExistIds[1].id} Cod Recebido ${roomId}`)
+        isRoom = roomExistIds.some(roomExistIds => roomExistIds.id === roomId)
+        console.log(`IsRoom dentro de verifyRoom ${isRoom}`)
+        return isRoom
     }
 }
